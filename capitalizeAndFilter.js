@@ -1,9 +1,10 @@
 const capitalizeAndFilter = (array) => {
   const newArray = [];
 
-  for(let i = 0; i < array.length; i++) {
-    array[i] = array[i].toUpperCase();
+  array.forEach(capAndFilter);
 
+  function capAndFilter(item, i) {
+    array[i] = item.toUpperCase();
 
     if(array[i].charAt(0) !== 'F') {
       newArray.push(array[i]);
